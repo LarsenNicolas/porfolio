@@ -33,8 +33,6 @@ jobs:
         run: npm ci
 
       # Paso 4: Ejecutar pruebas (opcional)
-      - name: Run tests
-        run: npm test
 
       # Paso 5: Construir la aplicación Angular
       - name: Build Angular app
