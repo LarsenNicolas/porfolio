@@ -1,0 +1,16 @@
+<div class="initial-container" [class.navbar]="isNavbar">
+  <!-- Logo -->
+  <div class="initial">
+    <h1>Nicolas Larsen</h1>
+    <ngx-typed-js [strings]="['Software developer.']">
+      <h1 class="typing"></h1>
+    </ngx-typed-js>
+  </div>
+  <!-- Opciones del navbar -->
+  <div class="navbar-options" *ngIf="isNavbar">
+    <button class="option">Inicio</button>
+    <button class="option">Sobre mí</button>
+    <button class="option">Proyectos</button>
+    <button class="option">Contacto</button>
+  </div>
+</div>

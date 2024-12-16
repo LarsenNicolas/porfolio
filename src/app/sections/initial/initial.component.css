@@ -1,0 +1,104 @@
+:host-context(.scrolled) h1 {
+  transform: scale(0.8); /* Reduce el tamaño del texto */
+  opacity: 0.8; /* Cambia la opacidad */
+}
+
+.initial-content {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* Contenedor principal */
+.initial-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Título */
+.initial h1 {
+  font-size: 4.5rem;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  color: black;
+}
+
+.initial .typing {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+/* Opciones del navbar */
+.navbar-options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.option {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  transform: translateX(-100%); /* Inicialmente fuera de la pantalla */
+  opacity: 0; /* Invisible inicialmente */
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Animación para cada opción */
+.option:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.option:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.option:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.option:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Hover en las opciones */
+.option:hover {
+  background: white;
+  color: #4e54c8;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%); /* Inicia fuera de la pantalla */
+    opacity: 0; /* Invisible */
+  }
+  to {
+    transform: translateX(0); /* Llega a su posición */
+    opacity: 1; /* Visible */
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .initial h1 {
+    font-size: 2.5rem;
+  }
+
+  .initial .typing {
+    font-size: 1.5rem;
+  }
+
+  .option {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
