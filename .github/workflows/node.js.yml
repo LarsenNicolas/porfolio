@@ -39,11 +39,7 @@ jobs:
         run: npm run build -- --configuration=production
 
       # Paso 6: Guardar los artefactos del build (opcional)
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: angular-dist
-          path: dist/
+
       # Paso 7: Despliegue a GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
