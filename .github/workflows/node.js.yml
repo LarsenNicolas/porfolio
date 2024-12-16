@@ -38,7 +38,7 @@ jobs:
       - name: Build Angular app
         run: npm run build -- --configuration=production
 
-      # Paso 6: Guardar los artefactos del build (opcional)
+      # Paso 6: Guardar los artefactos del build (op cional)
 
       # Paso 7: Despliegue a GitHub Pages
       - name: Deploy to GitHub Pages
